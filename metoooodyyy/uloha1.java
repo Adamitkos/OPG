@@ -1,35 +1,18 @@
-public class uloha1{
-    static void vypisPole(int pole[]){
-        for(int i=0;i<pole.length;i++)
-        System.out.println(pole[i]);
-    }
-    static void minimum(int pole[]){
-        int min=pole[0];
-        for (int i=1;i<pole.length;i++){
-            if(min>pole[i]){
-                min=pole[i];
-            }}
-        System.out.println(min);
+import java.util.Scanner;
 
-    }
-    static void maximum(int pole[]){
-        int max=pole[0];
-        for (int i=1;i<pole.length;i++){
-            if(max<pole[i]){
-                max=pole[i];
-            }
-        }
-        System.out.println(max);
-    }
+public class uloha1 {
     public static void main(String[] args) {
-        int pole[]={50,60,88,32,1,87};
-        System.out.println("Pole je:");
-        vypisPole(pole);
-        System.out.print("Najmensie cislo je: ");
-        minimum(pole);
-        System.out.print("Najvacsie cislo je: ");
-        maximum(pole);
+        Scanner mojScanner=new Scanner(System.in);
+        System.out.print("Zadaj prve cislo: ");
+        int cislo1=mojScanner.nextInt();
+        System.out.print("Zadaj druhe cislo: ");
+        int cislo2=mojScanner.nextInt();
+        System.out.print("Zadaj tretie cislo: ");
+        int cislo3=mojScanner.nextInt();
+        najmensie(cislo1,cislo2,cislo3);
+    }
+    public static void najmensie(int a,int b,int c){
+        System.out.println(Math.min(Math.min(a,b),c));
 
     }
-
 }
